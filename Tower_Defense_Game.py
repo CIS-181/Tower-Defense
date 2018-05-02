@@ -12,4 +12,4 @@ def main():
     woodTexture.draw(win)
 
     while gameNotOver():
-        run game
+        # run game
