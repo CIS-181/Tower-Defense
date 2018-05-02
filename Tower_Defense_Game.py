@@ -16,6 +16,8 @@ def drawWin():
 def main():
     drawWin():
 
+    # insert code here to wait for user to click to start game
+        
     while gameNotOver():
         # run game
         
