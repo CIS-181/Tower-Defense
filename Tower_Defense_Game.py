@@ -10,3 +10,6 @@ def main():
     win.setCoords(0, 0, 1280, 736)
     woodTexture = Image(Point(640, 368), "map.png")
     woodTexture.draw(win)
+
+    while gameNotOver():
+        run game
