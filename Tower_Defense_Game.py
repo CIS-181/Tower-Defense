@@ -3,13 +3,20 @@
 
 from graphics import
 
-def main():
+win = GraphWin("TD_Game", 1280, 736)
+
+def drawWin():
     # Creates a graphics window and draws the map
-    win = GraphWin("TD_Game", 1280, 736)
+    # win = GraphWin("TD_Game", 1280, 736)
     win.setBackground("white")
     win.setCoords(0, 0, 1280, 736)
     woodTexture = Image(Point(640, 368), "map.png")
     woodTexture.draw(win)
 
+def main():
+    drawWin():
+
     while gameNotOver():
         # run game
+        
+main()
