@@ -8,24 +8,37 @@ import cory
 win = GraphWin("TD_Game", 1280, 736)
 
 def drawTowerSlots():
-        box1 = Rectangle(Point(14.5, 20.5), Point(15.5, 21.5))
-        box1.setFill("Black")
-        box1.draw(win)
+    # draws the towers with prices
+    tower1n = Image(Point(15, 21), "tower_basic_n.png")
+    tower1n.draw(win)
 
-        box2 = box1.clone()
-        box2.move(3, 0)
-        box2.draw(win)
+    tower2n = Image(Point(18, 21), "tower_sniper_n.png")
+    tower2n.draw(win)
 
-        box3 = box2.clone()
-        box3.move(3, 0)
-        box3.draw(win)
+    tower3n = Image(Point(21, 21), "tower_spread_n.png")
+    tower3n.draw(win)
 
-        box4 = box3.clone()
-        box4.move(3, 0)
-        box4.draw(win)
+    tower4n = Image(Point(24, 21), "tower_gatling_n.png")
+    tower4n.draw(win)
+
+    tower1Price = Text(Point(16, 21), 50)
+    tower1Price.setTextColor("white")
+    tower1Price.draw(win)
+
+    tower2Price = Text(Point(19.2, 21), 100)
+    tower2Price.setTextColor("white")
+    tower2Price.draw(win)
+
+    tower3Price = Text(Point(22.2, 21), 200)
+    tower3Price.setTextColor("white")
+    tower3Price.draw(win)
+
+    tower4Price = Text(Point(25.35, 21), 1000)
+    tower4Price.setTextColor("white")
+    tower4Price.draw(win)
 
 def drawWin():
-    # Creates a graphics window and draws the map
+    # creates a graphics window and draws the map
     win.setCoords(-.5, -.5, 39.5, 22.5)
     terrain = Image(Point(19.5, 11), "map.png")
     terrain.draw(win)
@@ -34,7 +47,7 @@ def drawWin():
     moneyText.setTextColor("white")
     moneyText.draw(win)
 
-    moneyTextVal = Text(Point(4.5, 21.5), 0)
+    moneyTextVal = Text(Point(4.5, 21.5), 50)
     moneyTextVal.setTextColor("white")
     moneyTextVal.draw(win)
     
@@ -69,7 +82,7 @@ def main():
     quarterCount = 0
     halfCount = 0
     oneCount = 0
-    money = 0
+    money = 50
     score = 0
     
     while True: #not gameOver():
